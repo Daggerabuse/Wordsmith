@@ -1,0 +1,115 @@
+Wordsmith - third-party notices
+================================
+
+Wordsmith is licensed separately (see LICENSE). It contains, or can download,
+the third-party components listed below. Each keeps its own license. Full
+license texts are in the mod jar under META-INF/licenses/ (and in licenses/
+next to this file).
+
+Licenses were checked against each project's own license file, model card or
+download page on 2026-11-04.
+
+
+PART 1 - INSIDE THE MOD JAR
+---------------------------
+
+Vosk API (Java binding and native libraries), version 0.3.45
+  Maven: com.alphacephei:vosk:0.3.45 (bundled unchanged, jar-in-jar)
+  Source: https://github.com/alphacep/vosk-api
+  Copyright: Alpha Cephei Inc.
+  License: Apache License 2.0 (licenses/Apache-2.0.txt)
+
+  The Vosk native libraries (libvosk.dll / libvosk.so / libvosk.dylib) are
+  built from these projects, which are statically linked into them:
+
+  - Kaldi speech recognition toolkit
+      https://github.com/kaldi-asr/kaldi
+      Copyright: Johns Hopkins University, Microsoft Corporation and the
+      other Kaldi authors (see Kaldi's COPYING file)
+      License: Apache License 2.0 (licenses/Apache-2.0.txt)
+  - OpenFst (Vosk's fork)
+      https://github.com/alphacep/openfst
+      Copyright: Google Inc. and the OpenFst authors
+      License: Apache License 2.0 (licenses/Apache-2.0.txt)
+  - OpenBLAS
+      https://github.com/OpenMathLib/OpenBLAS
+      Copyright (c) 2011-2014, The OpenBLAS Project
+      License: BSD 3-Clause (licenses/BSD-3-Clause-OpenBLAS.txt)
+  - CLAPACK (LAPACK)
+      https://www.netlib.org/clapack/
+      Copyright: The University of Tennessee, The University of California
+      Berkeley, The University of Colorado Denver
+      License: modified BSD (licenses/BSD-LAPACK.txt)
+
+  The Windows build of Vosk also ships these MinGW-w64 / GCC runtime
+  libraries, unchanged:
+
+  - libstdc++-6.dll, libgcc_s_seh-1.dll (GCC runtime libraries)
+      https://gcc.gnu.org/
+      Copyright: Free Software Foundation, Inc.
+      License: GNU GPL version 3 with the GCC Runtime Library Exception 3.1
+      (licenses/GPL-3.0.txt, licenses/GCC-Runtime-Library-Exception-3.1.txt).
+      Their source code is available from the GCC project at
+      https://gcc.gnu.org/ and from the MinGW-w64 project at
+      https://www.mingw-w64.org/.
+  - libwinpthread-1.dll (MinGW-w64 winpthreads)
+      https://www.mingw-w64.org/
+      Copyright (c) 2011 mingw-w64 project; parts (C) 2010 Lockless Inc.
+      License: MIT and BSD 3-Clause (licenses/MIT-mingw-w64-winpthreads.txt)
+
+whisper-jni, version 1.7.1
+  Maven: io.github.givimad:whisper-jni:1.7.1 (bundled unchanged, jar-in-jar)
+  Source: https://github.com/GiviMAD/whisper-jni
+  Copyright: Miguel Alvarez Diez (GiviMAD)
+  License: Apache License 2.0 (licenses/Apache-2.0.txt)
+
+whisper.cpp and ggml (native libraries inside whisper-jni)
+  Source: https://github.com/ggml-org/whisper.cpp
+  Copyright (c) 2023-2024 The ggml authors
+  License: MIT (licenses/MIT-whisper.cpp.txt)
+
+Minecraft item names
+  The names shown come from Minecraft's own language files, which
+  are loaded from the game at runtime and are not included in the mod.
+
+
+PART 2 - DOWNLOADED ONLY WHEN THE PLAYER CLICKS "DOWNLOAD"
+----------------------------------------------------------
+
+These speech models are not part of the mod. They are downloaded from their
+original publishers to config/wordsmith/models/ when the player chooses to,
+and are checked against a SHA-256 hash stored in the mod.
+
+KB-Whisper base (Swedish), file ggml-model-q5_0.bin
+  https://huggingface.co/KBLab/kb-whisper-base
+  Publisher: KBLab, National Library of Sweden (fine-tuned from
+  openai/whisper-base)
+  License: Apache License 2.0
+
+Vosk models, from https://alphacephei.com/vosk/models
+  License: Apache License 2.0, except where noted:
+    vosk-model-small-ca-0.4        (Catalan)
+    vosk-model-small-cs-0.4-rhasspy (Czech) - MIT, Copyright (c) 2020 Michael Hansen
+    vosk-model-small-de-0.15       (German)
+    vosk-model-small-en-us-0.15    (English)
+    vosk-model-small-eo-0.42       (Esperanto)
+    vosk-model-small-es-0.42       (Spanish)
+    vosk-model-small-fa-0.42       (Persian)
+    vosk-model-small-fr-0.22       (French)
+    vosk-model-small-hi-0.22       (Hindi)
+    vosk-model-small-it-0.22       (Italian)
+    vosk-model-small-ka-0.42       (Georgian)
+    vosk-model-small-kz-0.42       (Kazakh)
+    vosk-model-small-ky-0.42       (Kyrgyz)
+    vosk-model-small-nl-0.22       (Dutch)
+    vosk-model-small-pl-0.22       (Polish)
+    vosk-model-small-pt-0.3        (Portuguese)
+    vosk-model-small-ru-0.22       (Russian)
+    vosk-model-small-tr-0.3        (Turkish)
+    vosk-model-small-uk-v3-nano    (Ukrainian)
+    vosk-model-small-uz-0.22       (Uzbek)
+    vosk-model-small-vn-0.4        (Vietnamese)
+
+
+Minecraft is a trademark of Mojang AB. Wordsmith is not an official Minecraft
+product and is not approved by or associated with Mojang or Microsoft.
